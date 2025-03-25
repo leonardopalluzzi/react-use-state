@@ -1,11 +1,13 @@
 import TabContent from './TabContent'
 
-export default function Tab({ title, children, openFlag }) {
+export default function Tab({ title, children, openFlag, handleOpenFlag }) {
+
     return (
         <div className="tab">
-            <button onClick={openFlag} className="btn btn-primary mx-4">{title}</button>
-            <div className="tab_content">
-                <TabContent title={title} content={children} />
+            <button onClick={handleOpenFlag}
+                className="btn btn-primary mx-4">{title}</button>
+            <div>
+                <TabContent openFlag={openFlag} title={title} content={children} />
             </div>
 
         </div>

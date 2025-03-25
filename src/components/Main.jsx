@@ -40,16 +40,19 @@ export default function Main() {
         <div className="container">
 
             {tabs.map(item => (
-                <Tab
+
+                <Tab Tab
                     key={item.id}
                     title={item.title}
-                    openFlag={item.id}
+                    openFlag={openFlag === item.id}
+                    handleOpenFlag={() => setOpenFlag(openFlag === item.id ? 0 : item.id)}
                 >
                     <p>{item.content}</p>
                 </Tab>
-            ))}
+            ))
+            }
             {/* <Tab title={'HTML'} ><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, accusamus?</p></Tab> */}
-        </div>
+        </div >
 
     )
 }

@@ -1,8 +1,10 @@
-export default function TabContent({ title, content }) {
+export default function TabContent({ title, content, openFlag }) {
+    console.log(openFlag);
+
     return (
-        <div>
-            <h3>{title}</h3>
-            {content}
+        <div className="tab_content">
+            <h3>{openFlag && title}</h3>
+            {openFlag && content}
         </div>
     )
 }
