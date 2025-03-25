@@ -43,7 +43,7 @@ export default function Main() {
                 <Tab
                     key={item.id}
                     title={item.title}
-                // openFlag={item.id}
+                    openFlag={item.id}
                 >
                     <p>{item.content}</p>
                 </Tab>
