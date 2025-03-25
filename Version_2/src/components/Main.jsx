@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Tab from './Tab'
-import TabContent from './TabContent';
 
 export default function Main() {
     const [openFlag, setOpenFlag] = useState(1);
