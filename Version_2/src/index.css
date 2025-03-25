@@ -1,0 +1,67 @@
+@import 'bootstrap';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+header {
+  padding: 2rem;
+  background-color: lightgrey;
+  margin-bottom: 2rem;
+
+  .title {
+
+    color: black;
+    text-align: center;
+  }
+
+}
+
+.tab {
+
+  width: 100%;
+}
+
+.btn_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab_content {
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+
+.tab_border_none {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.error_tab_content {
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+}
