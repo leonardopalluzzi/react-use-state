@@ -1,1 +1,25 @@
-@import 'bootstrap'
+@import 'bootstrap';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+
+header {
+  padding: 2rem;
+  background-color: lightgrey;
+
+  .title {
+
+    color: black;
+    text-align: center;
+  }
+
+}
