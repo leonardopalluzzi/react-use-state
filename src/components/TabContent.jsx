@@ -1,10 +1,13 @@
-export default function TabContent({ title, content, openFlag }) {
-    console.log(openFlag);
+export default function TabContent({ data, openFlag }) {
 
     return (
         <div className="tab_content">
-            <h3>{openFlag && title}</h3>
-            {openFlag && content}
+            {data.map(item => (
+                <div>
+                    <h3>{openFlag === item.id ? item.title : ''}</h3>
+                    <p>{openFlag === item.id ? item.content : ''}</p>
+                </div>
+            ))}
         </div>
     )
 }

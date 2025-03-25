@@ -1,16 +1,21 @@
 import TabContent from './TabContent'
 
-export default function Tab({ title, children, openFlag, handleOpenFlag }) {
+export default function Tab({ openFlag, data, setOpenFlag }) {
 
     return (
-        <div className="tab">
-            <button onClick={handleOpenFlag}
-                className="btn btn-primary mx-4">{title}</button>
-            <div>
-                <TabContent openFlag={openFlag} title={title} content={children} />
+        <>
+            <div className="btn_container">
+                {data.map(item => (
+                    <button
+                        onClick={() => setOpenFlag(openFlag === item.id ? 0 : item.id)}
+                        key={item.id}
+                        className="btn btn-primary mx-4">
+                        {item.title}
+                    </button>
+                ))}
             </div>
+        </>
 
-        </div>
 
     )
 }

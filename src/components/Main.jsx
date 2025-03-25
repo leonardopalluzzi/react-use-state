@@ -1,58 +1,54 @@
 import { useState } from 'react'
 import Tab from './Tab'
+import TabContent from './TabContent';
 
 export default function Main() {
-    const [openFlag, setOpenFlag] = useState(0);
+    const [openFlag, setOpenFlag] = useState(1);
     const tabs = [
         {
             id: 1,
             title: 'HTML',
-            content: 'lorem'
+            content: 'lorem',
+            error: 'Seleziona un Tab'
         },
         {
             id: 2,
             title: 'CSS',
-            content: 'lorem'
+            content: 'lorem',
+            error: 'Seleziona un Tab'
         },
         {
             id: 3,
             title: 'JavaScript',
-            content: 'lorem'
+            content: 'lorem',
+            error: 'Seleziona un Tab'
         },
         {
             id: 4,
             title: 'Node.js',
-            content: 'lorem'
+            content: 'lorem',
+            error: 'Seleziona un Tab'
         },
         {
             id: 5,
             title: 'Express',
-            content: 'lorem'
+            content: 'lorem',
+            error: 'Seleziona un Tab'
         },
         {
             id: 6,
             title: 'ReactJS',
-            content: 'lorem'
+            content: 'lorem',
+            error: 'Seleziona un Tab'
         }
     ]
 
     return (
-        <div className="container">
-
-            {tabs.map(item => (
-
-                <Tab Tab
-                    key={item.id}
-                    title={item.title}
-                    openFlag={openFlag === item.id}
-                    handleOpenFlag={() => setOpenFlag(openFlag === item.id ? 0 : item.id)}
-                >
-                    <p>{item.content}</p>
-                </Tab>
-            ))
-            }
-            {/* <Tab title={'HTML'} ><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, accusamus?</p></Tab> */}
-        </div >
-
+        <>
+            <div className="container">
+                <Tab data={tabs} setOpenFlag={setOpenFlag} openFlag={openFlag} />
+                <TabContent data={tabs} openFlag={openFlag} />
+            </div >
+        </>
     )
 }
