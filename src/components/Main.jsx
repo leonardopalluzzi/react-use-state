@@ -9,37 +9,31 @@ export default function Main() {
             id: 1,
             title: 'HTML',
             content: 'lorem',
-            error: 'Seleziona un Tab'
         },
         {
             id: 2,
             title: 'CSS',
             content: 'lorem',
-            error: 'Seleziona un Tab'
         },
         {
             id: 3,
             title: 'JavaScript',
             content: 'lorem',
-            error: 'Seleziona un Tab'
         },
         {
             id: 4,
             title: 'Node.js',
             content: 'lorem',
-            error: 'Seleziona un Tab'
         },
         {
             id: 5,
             title: 'Express',
             content: 'lorem',
-            error: 'Seleziona un Tab'
         },
         {
             id: 6,
             title: 'ReactJS',
             content: 'lorem',
-            error: 'Seleziona un Tab'
         }
     ]
 

@@ -9,11 +9,11 @@ export default function Tab({ openFlag, data, setOpenFlag }) {
                     <button
                         onClick={() => setOpenFlag(openFlag === item.id ? 0 : item.id)}
                         key={item.id}
-                        className="btn btn-primary mx-4">
+                        className={`btn ${openFlag === item.id ? 'btn-warning' : 'btn-primary'} mx-4`}>
                         {item.title}
                     </button>
                 ))}
-            </div>
+            </div >
         </>
 
 
